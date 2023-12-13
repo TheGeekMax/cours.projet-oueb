@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr_FR">
+    <head>
+        <title>Projet Oueb²</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/167f1fd28a.js" crossorigin="anonymous"></script>
+        <script src="/files/index.js"></script>
+        <script src="/files/theme.js"></script>
+        <link rel="icon" href="/pictures/pics/logo.png">
+
+        <meta property="og:title" content="Projet oueb² - {{tag-name}}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://cours.projet-oueb.fr/article/{{tag-article}}" />
+        <meta property="og:image" content="{{tag-img}}" />
+        <meta property="og:description" content="{{tag-desc}}" />
+        <meta name="theme-color" content="#4CAF50">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+        <link rel="stylesheet" href="/files/style.css">
+    </head>
+    <body>
+        <aside>
+            <div id="contentAround">
+                <div id="logoContent">
+                    <img src="/pictures/pics/logo.png" alt="logo projet oueb2">
+                    <p>Projet Oueb²</p>
+                    <button id="themeButton" onclick="swapTheme()">
+                        <i class="fas fa-moon" id="moon"></i>
+                        <i class="fas fa-sun" id="sun"></i>
+                    </button>
+                </div>
+                <hr>
+                <a href="/">Home</a>
+                <a href="/article">Articles</a>
+                <hr>
+                {{categories}}
+                <hr>
+                {{sous-categories}}
+            </div>
+        </aside>
+        <article>
+            <div id="mainarticle">
+                <div id="contentarticle">
+                    
+                    {{articles}}
+                </div>
+            </div>
+        </article>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    </body>
+</html>

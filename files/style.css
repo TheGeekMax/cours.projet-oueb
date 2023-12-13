@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&display=swap');
+
+:root{
+    /*
+    --background-color: #E1E1E1;
+    --text-color: #353C36; 
+    --background-shadow: #464646;
+    --aside-color: #ebebeb; 
+    --article-color: #ebebeb; 
+    --link-background: #47a87e; 
+    --link-color: #47a87e;
+    --link-hover: #2d7657; 
+    --article-card: var(--link-background); 
+    --article-background: #A0A0A055;
+    --hr-color: #CCCCCC; 
+    */
+    --background-color: #1a1a1a;
+    --text-color: #d7d7d7; 
+    --background-shadow: #464646;
+    --aside-color: #3d3d3d; 
+    --article-color: var(--aside-color); 
+    --link-background: #47a87e; 
+    --link-color: #47a87e;
+    --link-hover: #2d7657; 
+    --article-card: var(--link-background); 
+    --article-background: #0A0A0A55;
+    --hr-color: #CCCCCC; 
+}
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    width:100%;
+    background-color: var(--background-color);
+}
+
+body{
+    display: flex;
+}
+
+pre{
+    display: table;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+
+
+#contentAround, article {
+    vertical-align: top;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+    color: var(--text-color);
+    
+}
+
+aside {
+    width: 300px;
+}
+
+article {
+    width: 87%;
+    height: 100vh;
+}
+
+#contentAround a{
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 7px 5px;
+    background-color: none; /* var(--link-background);*/
+    border-radius: 25px;
+    border: 5px solid var(--link-background);
+
+    transition: all 0.15s ease-in-out;
+}
+
+#contentAround a:hover{
+    color: var(--aside-color);
+    text-decoration: none;
+    background-color: var(--link-background);
+}
+
+#contentAround a:active{
+    color: var(--aside-color);
+    text-decoration: none;
+    background-color: var(--link-hover);
+    border: 5px solid var(--link-hover);
+}
+
+table{
+    border-collapse: collapse;
+}
+
+th, td{
+    border: 1px solid var(--text-color);
+    padding: 5px 10px;
+    text-align: center;
+}
+
+thead{
+    background-color: var(--link-background);
+}
+
+h3{
+    /*bold*/
+    font-weight: 900;
+    font-size: 1.2em;
+}
+
+#mainarticle{
+    background-color: var(--article-color);
+    border-radius: 25px;
+    border: 10px solid var(--background-color);
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+#contentarticle{
+    padding: 10px;
+}
+
+#logoContent{
+    text-align: center;
+    margin: 10px;
+}
+
+#logoContent *{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#logoContent img{
+    border-radius: 10px;
+}
+
+hr{
+    border: 1px solid var(--hr-color);
+    /*rentré dans le texte*/
+    margin:0 10px;
+}
+
+#contentAround{
+    background-color: var(--aside-color);
+    color: var(--text-color);
+    border-radius: 25px;
+    border: 10px solid var(--background-color);
+    text-align: center;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+p>code{
+    background-color: var(--background-color);
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.round-photo{
+    border-radius: 10%;
+}
+
+#mainarticle{
+    overflow: auto;
+    padding : 10px;
+}
+
+#contentarticle a{
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+#contentarticle a:hover{
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* css pour la page en lui meme */
+h1{
+    text-align: center;
+    font-size: 3em;
+}
+
+p{
+    text-align: justify;
+}
+
+#themeButton{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--aside-color);
+    border:none;
+    border-radius: 50%;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: all 0.15s ease-in-out;
+
+}
+
+#themeButton:hover{
+    background-color: var(--link-background);
+    color: var(--aside-color);
+}
+
+#themeButton:active{
+    background-color: var(--link-hover);
+    color: var(--aside-color);
+}
+
+
+/* css pour les cartes d'articles */
+.articleCard{
+    display:inline-block;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: var(--article-background);
+    border: 5px solid var(--article-card);
+    width: 300px;
+    text-align: center;
+}
+
+.articleCard img{
+    border-radius: 10px 10px 0 0;
+}
+
+.articleCard a{
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 2em;
+    margin-top: 10px;
+}
